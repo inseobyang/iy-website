@@ -12,38 +12,36 @@ import pic05 from '../assets/images/pic05.jpg'
 import pic06 from '../assets/images/pic06.jpg'
 
 class HomeIndex extends React.Component {
-    render() {
+  render() {
+    return (
+      <Layout>
+        <Helmet
+          title="inseobyang"
+          meta={[
+            { name: 'description', content: 'Sample' },
+            { name: 'keywords', content: 'sample, something' },
+          ]}
+        ></Helmet>
 
-        return (
-            <Layout>
-                <Helmet
-                    title="Gatsby Starter - Forty"
-                    meta={[
-                        { name: 'description', content: 'Sample' },
-                        { name: 'keywords', content: 'sample, something' },
-                    ]}
-                >
-                </Helmet>
+        <Banner />
 
-                <Banner />
-
-                <div id="main">
-                    <section id="one" className="tiles">
-                        <article style={{backgroundImage: `url(${pic01})`}}>
-                            <header className="major">
-                                <h3>Aliquam</h3>
-                                <p>Ipsum dolor sit amet</p>
-                            </header>
-                            <Link to="/landing" className="link primary"></Link>
-                        </article>
-                        <article style={{backgroundImage: `url(${pic02})`}}>
-                            <header className="major">
-                                <h3>Tempus</h3>
-                                <p>feugiat amet tempus</p>
-                            </header>
-                            <Link to="/landing" className="link primary"></Link>
-                        </article>
-                        <article style={{backgroundImage: `url(${pic03})`}}>
+        <div id="main">
+          <section id="one" className="tiles">
+            <article style={{ backgroundImage: `url(${pic01})` }}>
+              <header className="major">
+                <h3>mySchedule</h3>
+                <p>Term project</p>
+              </header>
+              <Link to="/landing" className="link primary"></Link>
+            </article>
+            <article style={{ backgroundImage: `url(${pic02})` }}>
+              <header className="major">
+                <h3>Tempus</h3>
+                <p>feugiat amet tempus</p>
+              </header>
+              <Link to="/landing" className="link primary"></Link>
+            </article>
+            {/*<article style={{backgroundImage: `url(${pic03})`}}>
                             <header className="major">
                                 <h3>Magna</h3>
                                 <p>Lorem etiam nullam</p>
@@ -70,24 +68,33 @@ class HomeIndex extends React.Component {
                                 <p>Feugiat amet tempus</p>
                             </header>
                             <Link to="/landing" className="link primary"></Link>
-                        </article>
-                    </section>
-                    <section id="two">
-                        <div className="inner">
-                            <header className="major">
-                                <h2>Massa libero</h2>
-                            </header>
-                            <p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet pharetra et feugiat tempus.</p>
-                            <ul className="actions">
-                                <li><Link to="/landing" className="button next">Get Started</Link></li>
-                            </ul>
-                        </div>
-                    </section>
-                </div>
-
-            </Layout>
-        )
-    }
+                        </article> */}
+          </section>
+          <section id="two">
+            <div className="inner">
+              <header className="major">
+                <h2>About Me</h2>
+              </header>
+              <p>
+                {' '}
+                I'm currently a Computer Systems Technology student at BCIT. I
+                also have a Honors Biology degree from the University of
+                Waterloo. I love learning and playing around with new
+                technology.{' '}
+              </p>
+              {/*        <ul className="actions">
+                <li>
+                  <Link to="/landing" className="button next">
+                    Get Started
+                  </Link>
+                </li>
+              </ul> */}
+            </div>
+          </section>
+        </div>
+      </Layout>
+    )
+  }
 }
 
 export default HomeIndex
